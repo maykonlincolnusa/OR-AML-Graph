@@ -1,8 +1,9 @@
 """Public API for OR AML Graph."""
 
 from .analytics import analyze_transactions, find_cycles
+from .temporal import temporal_cycles
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 
 def project_info() -> dict[str, str]:
@@ -13,5 +14,5 @@ def project_info() -> dict[str, str]:
     }
 
 
-__all__ = ["analyze_transactions", "find_cycles", "project_info"]
+__all__ = ["analyze_transactions", "find_cycles", "project_info", "temporal_cycles"]
 

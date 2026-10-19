@@ -12,6 +12,7 @@ Transaction monitoring can miss relationships that become visible only at networ
 - Fan-in and fan-out indicators with configurable thresholds.
 - Separate analysis for each currency; no implicit FX conversion.
 - Maximum depth and expansion budgets with visible truncation.
+- Strictly time-ordered cycle detection with bounded elapsed time and evidence.
 - Strict input validation, deterministic CLI, optional authenticated API, Docker image, and CI.
 
 ## Run
@@ -30,7 +31,7 @@ The request contains `transactions` and optional `options`. Money is represented
 
 ## Limitations and roadmap
 
-This is a reference prototype with in-process analysis and synthetic examples. It has no identity resolution, beneficial-ownership inference, graph database, sanctions screening, calibrated model, or production observability. Logical next steps are temporal cycle rules, entity-resolution interfaces, benchmark datasets, false-positive measurement, and a graph visualization.
+Set `action` to `temporal` to distinguish a causal sequence from a topology-only cycle. This is a reference prototype with in-process analysis and synthetic examples. It has no identity resolution, beneficial-ownership inference, graph database, sanctions screening, calibrated model, or production observability. Logical next steps are entity-resolution interfaces, benchmark datasets, false-positive measurement, and a graph visualization.
 
 ## Responsible use
 
